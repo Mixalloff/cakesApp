@@ -1,4 +1,14 @@
-<div class="menu-container">
-  <a class="menu-item" routerLink="/" routerLinkActive="active">Главная</a>
-  <a class="menu-item" routerLink="/orders" routerLinkActive="active">Заказы</a>
-</div>
+<ul class="side-nav fixed col s2 no-padding">
+  <li>
+    <div class="userView">
+      <div class="background">
+        <img [src]="profile.background">
+      </div>
+      <a><img class="circle" [src]="profile.image"></a>
+      <a><span class="white-text name">{{ profile.name }}</span></a>
+      <a><span class="white-text email">{{ profile.email }}</span></a>
+    </div>
+  </li>
+  <li><a  routerLink="/" routerLinkActive="active">Главная</a></li>
+  <li><a routerLink="/orders" routerLinkActive="active">Заказы</a></li>
+</ul>
