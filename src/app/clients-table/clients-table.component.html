@@ -1,4 +1,11 @@
 <h3>Таблица клиентов</h3>
+<ck-client-modal id="modal1"
+                 class="modal"
+                 materialize="modal"
+                 [clientInfo]="selectedClient"
+                 [materializeParams]="[{dismissible: false}]"
+                 [materializeActions]="modalActions">
+</ck-client-modal>
 <table class="highlight">
   <thead>
     <tr>
@@ -13,7 +20,7 @@
   </thead>
 
   <tbody>
-    <tr class="client-row" *ngFor="let client of clients" (click)="onClick(client)">
+    <tr class="client-row" *ngFor="let client of clients" (click)="openModal(client)">
       <td>{{ client.id }}</td>
       <td>{{ client.name }}</td>
       <td>{{ client.source }}</td>

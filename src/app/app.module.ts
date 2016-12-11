@@ -11,6 +11,7 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import { OrdersTableComponent } from './orders-table/orders-table.component';
 import { StartDashboardComponent } from './start-dashboard/start-dashboard.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
+import { ClientModalComponent } from './client-modal/client-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ClientsTableComponent } from './clients-table/clients-table.component';
     MainHeaderComponent,
     OrdersTableComponent,
     StartDashboardComponent,
-    ClientsTableComponent
+    ClientsTableComponent,
+    ClientModalComponent
   ],
   imports: [
     BrowserModule,

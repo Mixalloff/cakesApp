@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
+import { MaterializeAction } from "angular2-materialize";
 
 const clients = [
   { id: 1, name: 'Иванов Иван', source: 'vk', orders: [ {amount: 1000}, {amount: 2000} ], contacts: {phone: '+79998887766', vk: 'vk.com/ivanov'}, scoring: 5 },
@@ -13,6 +14,8 @@ const clients = [
 })
 export class ClientsTableComponent implements OnInit {
   clients = clients;
+  selectedClient = {};
+  modalActions = new EventEmitter<string|MaterializeAction>();
 
   constructor() { }
 
@@ -25,6 +28,11 @@ export class ClientsTableComponent implements OnInit {
 
   onClick(client) {
     console.log(client);
+  }
+
+  openModal(client) {
+    this.selectedClient = client;
+    this.modalActions.emit({action:"modal", params:['open']});
   }
 
 }
