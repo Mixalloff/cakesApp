@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let order of orders" (click)="onClick(order)">
+    <tr class="order-row" *ngFor="let order of orders" (click)="onClick(order)">
       <td>{{ order.id }}</td>
       <td>{{ order.client.name }}</td>
       <td>{{ order.name }}</td>

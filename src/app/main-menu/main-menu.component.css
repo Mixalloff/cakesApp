@@ -1,0 +1,20 @@
+:host {
+  display: inline-flex;
+  height: 90%;
+  padding: 20px;
+  width: 15%;
+  background-color: #ccc;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+}
+
+.menu-container {
+  width: 100%;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+}

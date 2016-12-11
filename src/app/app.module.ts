@@ -4,24 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import "materialize-css";
 import { MaterializeModule } from "angular2-materialize";
+import { appRoutes } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { OrdersTableComponent } from './orders-table/orders-table.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
+import { OrdersTableComponent } from './orders-table/orders-table.component';
+import { StartDashboardComponent } from './start-dashboard/start-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrdersTableComponent,
     MainMenuComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+    OrdersTableComponent,
+    StartDashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterializeModule
+    MaterializeModule,
+    appRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]
