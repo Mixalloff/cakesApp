@@ -19,7 +19,8 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "../node_modules/materialize-css/bin/materialize.css"
+        "../node_modules/materialize-css/bin/materialize.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [],
       "environments": {

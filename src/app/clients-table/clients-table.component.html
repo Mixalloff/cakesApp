@@ -1,0 +1,33 @@
+<h3>Таблица клиентов</h3>
+<table class="highlight">
+  <thead>
+    <tr>
+      <th data-field="id">ID</th>
+      <th data-field="name">Имя</th>
+      <th data-field="source">Источник</th>
+      <th data-field="ordersCount">Заказов</th>
+      <th data-field="amount">Сумма</th>
+      <th data-field="contacts">Контакты</th>
+      <th data-field="scoring">Скоринг</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="client-row" *ngFor="let client of clients" (click)="onClick(client)">
+      <td>{{ client.id }}</td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.source }}</td>
+      <td>{{ client.orders.length }}</td>
+      <td>{{ ordersAmount(client.orders) }}</td>
+      <td class="contacts-cell">
+        <span *ngIf="client.contacts.phone"><i class="fa fa-phone" aria-hidden="true"></i>{{ client.contacts.phone }}</span>
+        <span *ngIf="client.contacts.vk"><i class="fa fa-vk" aria-hidden="true"></i>{{ client.contacts.vk }}</span>
+        <span *ngIf="client.contacts.instagram"><i class="fa fa-instagram" aria-hidden="true"></i>{{ client.contacts.instagram }}</span>
+        <span *ngIf="client.contacts.email"><i class="fa fa-envelope-o" aria-hidden="true"></i>{{ client.contacts.email }}</span>
+      </td>
+      <td>
+        <i class="fa fa-star" aria-hidden="true" *ngFor="let item of [1,2,3,4,5] | slice:0:client.scoring"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

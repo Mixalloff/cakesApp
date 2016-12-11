@@ -1,0 +1,10 @@
+.contacts-cell > span {
+  display: block;
+}
+.contacts-cell .fa {
+  padding: 0 10px;
+}
+
+.client-row {
+  cursor: pointer;
+}

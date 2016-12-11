@@ -9,6 +9,7 @@
       <a><span class="white-text email">{{ profile.email }}</span></a>
     </div>
   </li>
-  <li><a  routerLink="/" routerLinkActive="active">Главная</a></li>
-  <li><a routerLink="/orders" routerLinkActive="active">Заказы</a></li>
+  <li><a routerLink="/" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{ exact: true }">Главная</a></li>
+  <li><a routerLink="/orders" routerLinkActive="active" class="menu-item">Заказы</a></li>
+  <li><a routerLink="/clients" routerLinkActive="active" class="menu-item">Клиенты</a></li>
 </ul>

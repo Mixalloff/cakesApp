@@ -1,5 +1,5 @@
 .userView {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(95, 0 ,0, 0.6);
   padding: 30px 10px 10px 10px;
 }
 .userView .name,
@@ -9,4 +9,18 @@
 
 .background > img {
   width: 100%;
+}
+
+.menu-item {
+  -moz-transition: all 0.3s ease-out;  /* FF4+ */
+  -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+  -ms-transition: all 0.3s ease-out;  /* IE10 */
+  transition: all 0.3s ease-out;  
+}
+
+.active {
+  margin-left: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
